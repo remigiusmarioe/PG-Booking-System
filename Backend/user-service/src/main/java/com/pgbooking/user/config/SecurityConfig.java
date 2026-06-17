@@ -22,8 +22,14 @@ public class SecurityConfig {
 
         return
                 http.csrf(csrf -> csrf.disable())
-                        .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/register",
-                                "/auth/verify-otp","/auth/login")
+                        .authorizeHttpRequests(auth ->
+                                auth.requestMatchers(
+                                        "/auth/register",
+                                                "/auth/verify-otp",
+                                                "/auth/login",
+                                                "/v3/api-docs/**",
+                                                "/swagger-ui/**",
+                                                "/swagger-ui.html")
                                 .permitAll()
                                 .requestMatchers("/owner/**").hasRole("PG_OWNER")
                                 .requestMatchers("/finder/**").hasRole("PG_FINDER")
