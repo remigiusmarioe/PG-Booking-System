@@ -3,8 +3,8 @@ spring:
     name: pg-service
   datasource:
     url: jdbc:mysql://localhost:3306/pg_db
-    username: root
-    password: Remigius@007
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   jpa:
     hibernate:
@@ -19,6 +19,6 @@ server:
     port: 8082
 
 cloudinary:
-  cloud-name: dublm90dv
-  api-key: 899139978248339
-  api-secret: Xg9ETGfJJ4LT7v69X1CfX4dzwmQ
+  cloud-name: ${CLOUD_NAME}
+  api-key: ${CLOUD_API_KEY}
+  api-secret: ${CLOUD_API_SECRET}

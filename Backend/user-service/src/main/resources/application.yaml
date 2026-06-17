@@ -2,15 +2,15 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:mysql://localhost:3306/user_db
-    username: root
-    password: Remigius@007
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   mail:
     host: smtp.gmail.com
     port: 587
-    username: remigiusmarioe.07@gmail.com
-    password: "khosftohvpflbxcg"
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
 
     properties:
       mail:
