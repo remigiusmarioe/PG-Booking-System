@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_db
+    username: root
+    password: Remigius@007
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: remigiusmarioe.07@gmail.com
+    password: "khosftohvpflbxcg"
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: false
+
+    properties :
+      hibernate:
+        format_sql: true
+server:
+  port: 8081
+
